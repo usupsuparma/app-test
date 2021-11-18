@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Test</string>
+    <string name="title_place">Place</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_user">User</string>
+    <string name="welcome">Welcome</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Submit</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_email">Email not valid</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_title">LOGIN</string>
+</resources>
