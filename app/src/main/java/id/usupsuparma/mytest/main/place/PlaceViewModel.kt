@@ -44,7 +44,6 @@ class PlaceViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _place.value = response.body()?.dataPlace?.content!!
-//                    _listReview.value = response.body()?.restaurant?.customerReviews
                 } else {
                     Log.e(TAG, "onFailure: ${response.message()}")
                 }
