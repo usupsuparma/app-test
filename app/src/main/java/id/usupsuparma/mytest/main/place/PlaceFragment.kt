@@ -35,11 +35,15 @@ class PlaceFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_place, container, false)
         rvPlace = root.findViewById(R.id.rv_place);
 
-        showRecyclerList()
 
         mPlaceViewModel.places.observe(viewLifecycleOwner, Observer {
+            Log.d(TAG, "onCreateView: $it")
             mPlaces.addAll(it)
+            setData(it)
         })
+
+
+        showRecyclerList()
         return root
     }
 
@@ -49,5 +53,11 @@ class PlaceFragment : Fragment() {
         rvPlace.layoutManager = LinearLayoutManager(activity)
         val listPlaceAdapter = PlaceAdapter(mPlaces)
         rvPlace.adapter = listPlaceAdapter
+    }
+
+    private fun setData(places: List<Place>) {
+        val listPlaceAdapter = PlaceAdapter(places)
+        rvPlace.adapter = listPlaceAdapter
+
     }
 }
